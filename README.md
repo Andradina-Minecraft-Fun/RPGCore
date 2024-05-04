@@ -4,9 +4,13 @@ RPGCore é uma API que adiciona novas funcionalidades para a criação de um nov
 
 O plugin por si só não muda nada, não adiciona nenhum comando e nenhuma funcionalidade diretamente ao jogo. Esse plugin é o core para o desenvolvimento de addons, que centraliza adição de atributos em entidades e itens.
 
+Toda modificação é feita com base em atributos, não mudando nenhum calculo original de combate, defesa, loot ou qualquer outra coisa. O intuito tambem, não é ouvir nenhum hook ou modificar diretamente uma ação, deixando isso à cargo e conciencia dos AddOns. 
+
+Presamos ao maximo a originalidade do Minecraft e o desempenho do servidor, não modificando ou processando um unico 1 tick.
+
 ## Instalação
 
-Esse ainda é um repositório teste, processa a compilação
+Esse ainda é um repositório teste, instale com a compilação
 <!-- Baixe o `.jar` diretamente da pagina de release, e coloque na sua pasta de plugins. A instalação é como um plugin normal. -->
 
 ## Compilando
