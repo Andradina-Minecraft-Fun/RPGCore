@@ -6,7 +6,16 @@ O plugin por si só não muda nada, não adiciona nenhum comando e nenhuma funci
 
 ## Instalação
 
-Baixe o `.jar` diretamente da pagina de release, e coloque na sua pasta de plugins. A instalação é como um plugin normal.
+Esse ainda é um repositório teste, processa a compilação
+<!-- Baixe o `.jar` diretamente da pagina de release, e coloque na sua pasta de plugins. A instalação é como um plugin normal. -->
+
+## Compilando
+
+Clone esse repositório e execute os comandos:
+
+```sh
+mvn compile && mvn package
+```
 
 ## AddOns
 
