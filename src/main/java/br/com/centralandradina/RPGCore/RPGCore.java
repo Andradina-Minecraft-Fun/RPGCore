@@ -2,15 +2,45 @@ package br.com.centralandradina.RPGCore;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.configuration.file.FileConfiguration;
 
 public class RPGCore extends JavaPlugin
 {
+	FileConfiguration config;
+	
 	/**
 	 * hook plugin habilitado
 	 */
 	@Override
 	public void onEnable()
 	{
+		// config
+		config = this.getConfig();
+		config.addDefault("ST.multiplier", 1);
+		config.addDefault("ST.per_level.GENERIC_ARMOR", 0.6);
+		config.addDefault("ST.per_level.GENERIC_ARMOR_TOUGHNESS", 0.7);
+		config.addDefault("ST.per_level.GENERIC_ATTACK_DAMAGE", 0.7);
+		config.addDefault("ST.per_level.GENERIC_ATTACK_KNOCKBACK", 0.2);
+		config.addDefault("ST.per_level.GENERIC_KNOCKBACK_RESISTANCE", 0.1);
+
+		config.addDefault("DX.multiplier", 1);
+		config.addDefault("DX.per_level.GENERIC_ARMOR_TOUGHNESS", 0.3);
+		config.addDefault("DX.per_level.GENERIC_ATTACK_SPEED", 0.3);
+		config.addDefault("DX.per_level.GENERIC_MOVEMENT_SPEED", 0.2);
+		config.addDefault("DX.per_level.GENERIC_FLYING_SPEED", 0.1);
+		config.addDefault("DX.per_level.GENERIC_LUCK", 0.1);
+
+		config.addDefault("IQ.multiplier", 1);
+		config.addDefault("IQ.per_level.GENERIC_LUCK", 0.2);
+
+		config.addDefault("HT.multiplier", 1);
+		config.addDefault("HT.per_level.GENERIC_MAX_HEALTH", 0.2);
+		config.addDefault("HT.per_level.GENERIC_MOVEMENT_SPEED", 0.2);
+		config.addDefault("HT.per_level.GENERIC_MAX_ABSORPTION", 0.2);
+		
+		config.options().copyDefaults(true);
+		saveConfig();
+
 		Bukkit.getLogger().info("[RPGCore] Enabled");
 	}
 
